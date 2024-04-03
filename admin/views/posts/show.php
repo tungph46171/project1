@@ -6,7 +6,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                Detail
+                Thông tin bài viết
             </h6>
         </div>
         <div class="card-body">
@@ -46,7 +46,7 @@
                 </tr>
             </table>
 
-            <a href="<?= BASE_URL_ADMIN ?>?act=posts" class="btn btn-danger">Back to list</a>
+            <a href="<?= BASE_URL_ADMIN ?>?act=posts" class="btn btn-danger">Quay lại</a>
         </div>
     </div>
 </div>

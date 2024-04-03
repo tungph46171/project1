@@ -3,7 +3,7 @@
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?>
 
-        <a href="<?= BASE_URL_ADMIN ?>?act=tag-create" class="btn btn-primary">Create</a>
+        <a href="<?= BASE_URL_ADMIN ?>?act=tag-create" class="btn btn-primary">Thêm mới từ khóa</a>
     </h1>
 
     <!-- DataTales Example -->
@@ -27,15 +27,15 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Action</th>
+                            <th>Từ khóa</th>
+                            <th>Tùy chọn</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Action</th>
+                            <th>Từ khóa</th>
+                            <th>Tùy chọn</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -44,11 +44,11 @@
                                 <td><?= $tag['id'] ?></td>
                                 <td><?= $tag['name'] ?></td>
                                 <td>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=tag-detail&id=<?= $tag['id'] ?>" class="btn btn-info">Show</a>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=tag-update&id=<?= $tag['id'] ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=tag-detail&id=<?= $tag['id'] ?>" class="btn btn-info">Xem</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=tag-update&id=<?= $tag['id'] ?>" class="btn btn-warning">Chỉnh sửa</a>
                                     <a href="<?= BASE_URL_ADMIN ?>?act=tag-delete&id=<?= $tag['id'] ?>" 
-                                        onclick="return confirm('Bạn có chắc chắn xóa không?')"
-                                        class="btn btn-danger">Delete</a>
+                                        onclick="return confirm('Bạn có chắc chắn xóa từ khóa này không?')"
+                                        class="btn btn-danger">Loại bỏ</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

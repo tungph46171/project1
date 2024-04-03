@@ -6,7 +6,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                Update
+                Chỉnh sửa
             </h6>
         </div>
         <div class="card-body">
@@ -33,14 +33,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
-                            <label for="name" class="form-label">Name:</label>
+                            <label for="name" class="form-label">Từ khóa:</label>
                             <input type="text" class="form-control" id="name" value="<?= $tag['name'] ?>" placeholder="Enter name" name="name">
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="<?= BASE_URL_ADMIN ?>?act=tags" class="btn btn-danger">Back to list</a>
+                <button type="submit" class="btn btn-primary">Cập nhật</button>
+                <a href="<?= BASE_URL_ADMIN ?>?act=tags" class="btn btn-danger">Hoàn tác</a>
             </form>
         </div>
     </div>

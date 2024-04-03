@@ -6,7 +6,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                Create
+                Thêm mới
             </h6>
         </div>
         <div class="card-body">
@@ -26,21 +26,21 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
-                            <label for="name" class="form-label">Name:</label>
-                            <input type="text" class="form-control" id="name" value="<?= isset($_SESSION['data']) ? $_SESSION['data']['name'] : null ?>" placeholder="Enter name" name="name">
+                            <label for="name" class="form-label">Tên tác giả:</label>
+                            <input type="text" class="form-control" id="name" value="<?= isset($_SESSION['data']) ? $_SESSION['data']['name'] : null ?>" placeholder="Điền tên tác giả..." name="name">
                         </div>
                     </div>
                     
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
-                            <label for="avatar" class="form-label">Avatar:</label>
+                            <label for="avatar" class="form-label">Ảnh đại diện:</label>
                             <input type="file" class="form-control" id="avatar" name="avatar">
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="<?= BASE_URL_ADMIN ?>?act=authors" class="btn btn-danger">Back to list</a>
+                <button type="submit" class="btn btn-primary">Thêm</button>
+                <a href="<?= BASE_URL_ADMIN ?>?act=authors" class="btn btn-danger">Quay lại</a>
             </form>
         </div>
     </div>

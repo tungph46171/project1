@@ -3,7 +3,7 @@
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?>
 
-        <a href="<?= BASE_URL_ADMIN ?>?act=author-create" class="btn btn-primary">Create</a>
+        <a href="<?= BASE_URL_ADMIN ?>?act=author-create" class="btn btn-primary">Thêm mới tác giả</a>
     </h1>
 
     <!-- DataTales Example -->
@@ -27,17 +27,17 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Avatar</th>
-                            <th>Action</th>
+                            <th>Tên tác giả</th>
+                            <th>Ảnh đại diện</th>
+                            <th>Tùy chọn</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Avatar</th>
-                            <th>Action</th>
+                            <th>Tên tác giả</th>
+                            <th>Ảnh đại diện</th>
+                            <th>Tùy chọn</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -49,11 +49,11 @@
                                     <img src="<?= BASE_URL . $author['avatar'] ?>" alt="" width="100px">
                                 </td>
                                 <td>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=author-detail&id=<?= $author['id'] ?>" class="btn btn-info">Show</a>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=author-update&id=<?= $author['id'] ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=author-detail&id=<?= $author['id'] ?>" class="btn btn-info">Xem chi tiết</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=author-update&id=<?= $author['id'] ?>" class="btn btn-warning">Sửa thông tin</a>
                                     <a href="<?= BASE_URL_ADMIN ?>?act=author-delete&id=<?= $author['id'] ?>" 
-                                        onclick="return confirm('Bạn có chắc chắn xóa không?')"
-                                        class="btn btn-danger">Delete</a>
+                                        onclick="return confirm('Bạn có chắc chắn xóa người viết này không?')"
+                                        class="btn btn-danger">Loại bỏ</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

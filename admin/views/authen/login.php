@@ -20,6 +20,18 @@
 
 </head>
 
+<style>
+    .bg-gradient-primary{
+        background-image: url("https://i.pinimg.com/originals/25/3f/ac/253fac3f3b23509e2ee1ccc686504164.jpg");
+    }
+    .col-lg-6{
+        background-image: url("https://minhtuanmobile.com/uploads/blog/furina-xung-danh-thuy-than-231030103749.jpg");
+    }
+    .p-5{
+        background-color: #ffff;
+    }
+</style>
+
 <body class="bg-gradient-primary">
 
     <div class="container">
@@ -37,7 +49,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Đăng nhập trang quản trị!</h1>
                                     </div>
 
                                     <?php if (isset($_SESSION['error'])) : ?>
@@ -49,12 +61,12 @@
 
                                     <form action="" method="POST" class="user">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" name="email" placeholder="Enter Email Address...">
+                                            <input type="email" class="form-control form-control-user" name="email" placeholder="Điền địa chỉ email của bạn...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="password" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user" name="password" placeholder="Vui lòng nhập mật khẩu...">
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</a>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Đăng nhập</a>
                                     </form>
                                 </div>
                             </div>

@@ -54,9 +54,9 @@
 
                 </table>
 
-                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-success">Lưu</button>
 
-                <a href="<?= BASE_URL_ADMIN ?>?act=posts" class="btn btn-danger">Back to list</a>
+                <a href="<?= BASE_URL_ADMIN ?>?act=posts" class="btn btn-danger">Về trang quản trị</a>
 
             </form>
         </div>

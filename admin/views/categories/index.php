@@ -3,7 +3,7 @@
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?>
 
-        <a href="<?= BASE_URL_ADMIN ?>?act=category-create" class="btn btn-primary">Create</a>
+        <a href="<?= BASE_URL_ADMIN ?>?act=category-create" class="btn btn-primary">Thêm mới danh mục</a>
     </h1>
 
     <!-- DataTales Example -->
@@ -27,15 +27,15 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Action</th>
+                            <th>Tên danh mục</th>
+                            <th>Tùy chọn</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Action</th>
+                            <th>Tên danh mục</th>
+                            <th>Tùy chọn</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -44,11 +44,11 @@
                                 <td><?= $category['id'] ?></td>
                                 <td><?= $category['name'] ?></td>
                                 <td>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=category-detail&id=<?= $category['id'] ?>" class="btn btn-info">Show</a>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=category-update&id=<?= $category['id'] ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=category-detail&id=<?= $category['id'] ?>" class="btn btn-info">Xem chi tiết</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=category-update&id=<?= $category['id'] ?>" class="btn btn-warning">Chỉnh sửa</a>
                                     <a href="<?= BASE_URL_ADMIN ?>?act=category-delete&id=<?= $category['id'] ?>" 
-                                        onclick="return confirm('Bạn có chắc chắn xóa không?')"
-                                        class="btn btn-danger">Delete</a>
+                                        onclick="return confirm('Bạn có chắc chắn xóa danh mục này không?')"
+                                        class="btn btn-danger">Xóa danh mục</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

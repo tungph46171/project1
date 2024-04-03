@@ -60,6 +60,13 @@ match($act) {
     'post-update' => postUpdate($_GET['id']),
     'post-delete' => postDelete($_GET['id']),
 
+    // CRUD product
+    'products' => productListAll(),
+    'product-detail' => productShowOne($_GET['id']),
+    'product-create' => productCreate(),
+    'product-update' => productUpdate($_GET['id']),
+    'product-delete' => productDelete($_GET['id']),
+
     // Setting
     'setting-form' => settingShowForm(),
     'setting-save' => settingSave(),

@@ -26,11 +26,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
-                            <label for="title" class="form-label">Title:</label>
+                            <label for="title" class="form-label">Tiêu đề:</label>
                             <input type="text" class="form-control" id="title" value="<?= isset($_SESSION['data']) ? $_SESSION['data']['title'] : null ?>" placeholder="Enter title" name="title">
                         </div>
                         <div class="mb-3 mt-3">
-                            <label for="excerpt" class="form-label">Excerpt:</label>
+                            <label for="excerpt" class="form-label">Đoạn trích:</label>
                             <textarea class="form-control" id="excerpt" rows="7" name="excerpt"><?= isset($_SESSION['data']) ? $_SESSION['data']['excerpt'] : null ?></textarea>
                         </div>
                         <div class="mb-3 mt-3">
@@ -45,7 +45,7 @@
 
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
-                            <label for="category_id" class="form-label">Category:</label>
+                            <label for="category_id" class="form-label">Danh mục:</label>
                             <select class="form-control" id="category_id" name="category_id">
                                 <?php foreach ($categories as $category) : ?>
                                     <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
@@ -53,7 +53,7 @@
                             </select>
                         </div>
                         <div class="mb-3 mt-3">
-                            <label for="author_id" class="form-label">Category:</label>
+                            <label for="author_id" class="form-label">Tác giả:</label>
                             <select class="form-control" id="author_id" name="author_id">
                                 <?php foreach ($authors as $author) : ?>
                                     <option value="<?= $author['id'] ?>"><?= $author['name'] ?></option>
@@ -61,7 +61,7 @@
                             </select>
                         </div>
                         <div class="mb-3 mt-3">
-                            <label for="tags" class="form-label">Tags:</label>
+                            <label for="tags" class="form-label">Từ khóa:</label>
                             <select class="form-control" id="tags" name="tags[]" multiple>
                                 <?php foreach ($tags as $tag) : ?>
                                     <option value="<?= $tag['id'] ?>"><?= $tag['name'] ?></option>
@@ -69,7 +69,7 @@
                             </select>
                         </div>
                         <div class="mb-3 mt-3">
-                            <label for="status" class="form-label">Status:</label>
+                            <label for="status" class="form-label">Trạng thái:</label>
                             <select class="form-control" id="status" name="status">
                                 <option value="<?= STATUS_DRAFT ?>"><?= ucfirst(STATUS_DRAFT) ?></option>
                                 <option value="<?= STATUS_PUBLISHED ?>"><?= ucfirst(STATUS_PUBLISHED) ?></option>
@@ -86,14 +86,14 @@
 
                     <div class="col-md-12">
                         <div class="mb-3 mt-3">
-                            <label for="content" class="form-label">Content:</label>
+                            <label for="content" class="form-label">Nội dung:</label>
                             <textarea id="content" name="content"><?= isset($_SESSION['data']) ? $_SESSION['data']['content'] : null ?></textarea>
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="<?= BASE_URL_ADMIN ?>?act=posts" class="btn btn-danger">Back to list</a>
+                <button type="submit" class="btn btn-primary">Đăng</button>
+                <a href="<?= BASE_URL_ADMIN ?>?act=posts" class="btn btn-danger">Hoàn tác</a>
             </form>
         </div>
     </div>
