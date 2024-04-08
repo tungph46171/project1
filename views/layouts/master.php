@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>ZenBlog Bootstrap Template - Index</title>
+  <title>Web Nhóm 7</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -29,6 +29,9 @@
   <link href="<?= BASE_URL ?>assets/client/assets/css/variables.css" rel="stylesheet">
   <link href="<?= BASE_URL ?>assets/client/assets/css/main.css" rel="stylesheet">
 
+
+
+
   <!-- =======================================================
   * Template Name: ZenBlog
   * Updated: Jan 09 2024 with Bootstrap v5.3.2
@@ -49,6 +52,11 @@
   <?php require_once PATH_VIEW . $view . '.php'; ?>
 
   </main><!-- End #main -->
+
+
+  <?php require_once PATH_VIEW . $view . '.php'; ?>
+
+
 
   <!-- ======= Footer ======= -->
   <?php require_once PATH_VIEW . 'layouts/partials/footer.php'; ?>

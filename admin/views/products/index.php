@@ -3,7 +3,7 @@
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?>
 
-        <a href="<?= BASE_URL_ADMIN ?>?act=post-create" class="btn btn-primary">Thêm mới bài viết</a>
+        <a href="<?= BASE_URL_ADMIN ?>?act=product-create" class="btn btn-primary">Thêm mới sản phẩm</a>
     </h1>
 
     <!-- DataTales Example -->
@@ -27,69 +27,128 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Tiêu đề</th>
-                            <th>Đoạn trích</th>
+                            <th>Tên SP</th>
+                            <th>Hình ảnh</th>
+                            <th>Giá gốc</th>
+                            <th>Giá sale</th>
+                            <th>Thương hiệu</th>
+                            <th>Kích thước</th>
+                            <th>Đường kính</th>
+                            <th>Độ dày</th>
+                            <th>Dây đeo</th>
+                            <th>Mặt kính</th>
+                            <th>Giới tính</th>
+                            <th>Màu sắc</th>
+                            <th>Xuất xứ</th>
                             <th>Danh mục</th>
-                            <th>Tác giả</th>
-                            <th>Hình minh họa</th>
-                            <th>Cover</th>
-                            <th>Trạng thái</th>
-                            <th>Is_trending</th>
-                            <th>Ngày đăng</th>
-                            <th>Cập nhật lúc</th>
+                            <th>Từ khóa</th>
+                            <th>Bảo hành</th>
+                            <th>Mô tả</th>
                             <th>Tùy chọn</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Tiêu đề</th>
-                            <th>Đoạn trích</th>
+                            <th>Tên SP</th>
+                            <th>Hình ảnh</th>
+                            <th>Giá gốc</th>
+                            <th>Giá sale</th>
+                            <th>Thương hiệu</th>
+                            <th>Kích thước</th>
+                            <th>Đường kính</th>
+                            <th>Độ dày</th>
+                            <th>Dây đeo</th>
+                            <th>Mặt kính</th>
+                            <th>Giới tính</th>
+                            <th>Màu sắc</th>
+                            <th>Xuất xứ</th>
                             <th>Danh mục</th>
-                            <th>Tác giả</th>
-                            <th>Hình minh họa</th>
-                            <th>Cover</th>
-                            <th>Trạng thái</th>
-                            <th>Is_trending</th>
-                            <th>Ngày đăng</th>
-                            <th>Cập nhật lúc</th>
+                            <th>Từ khóa</th>
+                            <th>Bảo hành</th>
+                            <th>Mô tả</th>
                             <th>Tùy chọn</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        <?php foreach ($posts as $post) : ?>
+                        <?php foreach ($products as $product) : ?>
                             <tr>
-                                <td><?= $post['p_id'] ?></td>
-                                <td><?= $post['p_title'] ?></td>
-                                <td><?= $post['p_excerpt'] ?></td>
-                                <td><?= $post['c_name'] ?></td>
+                                <td><?= $product['p_id'] ?></td>
+                                <td><?= $product['p_name'] ?></td>
+                                                                
+                                <td>
+                                    <img src="<?= BASE_URL . $product['p_img'] ?>" alt="" width="100px">
+                                </td>
+
+                                <td><?= $product['p_price'] ?> VND</td>
+                                <td><?= $product['p_price_sale'] ?> VND</td>
+
                                 <td>
                                     <div style="display: flex;">
-                                        <img src="<?= $post['au_avatar'] ?>" alt="">
-                                        <p><?= $post['au_name'] ?></p>
+                                        <p><?= $product['br_name'] ?></p>
                                     </div>
+                                </td>
+
+                                <td>
+                                    <div style="display: flex;">
+                                        <p><?= $product['si_name'] ?></p>
+                                    </div>
+                                </td>
+
+                                <td><?= $product['p_diameter'] ?> mm</td>
+                                <td><?= $product['p_thickness'] ?> mm</td>
+
+                                <td>
+                                    <div style="display: flex;">
+                                        <p><?= $product['st_name'] ?></p>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div style="display: flex;">
+                                        <p><?= $product['gl_name'] ?></p>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <?= $product['p_gender'] 
+                                            ? '<span class="badge badge-success">Nam</span>' 
+                                                : '<span class="badge badge-warning">Nữ</span>' ?>
                                 </td>
                                 
                                 <td>
-                                    <img src="<?= BASE_URL . $post['p_img_thumnail'] ?>" alt="" width="100px">
+                                    <div style="display: flex;">
+                                        <p><?= $product['cl_name'] ?></p>
+                                    </div>
                                 </td>
+
+                                <td><?= $product['p_origin'] ?></td>
+
                                 <td>
-                                    <img src="<?= BASE_URL . $post['p_img_cover'] ?>" alt="" width="100px">
+                                    <div style="display: flex;">
+                                        <p><?= $product['c_name'] ?></p>
+                                    </div>
                                 </td>
-                                <td><?= $post['p_status'] ?></td>
+
                                 <td>
-                                    <?= $post['p_is_trending'] 
-                                            ? '<span class="badge badge-success">Yes</span>' 
-                                                : '<span class="badge badge-warning">No</span>' ?>
+                                    <div style="display: flex;">
+                                        <p><?= $product['tag_name'] ?></p>
+                                    </div>
                                 </td>
-                                <td><?= $post['p_created_at'] ?></td>
-                                <td><?= $post['p_updated_at'] ?></td>
+
                                 <td>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=post-detail&id=<?= $post['p_id'] ?>" class="btn btn-info">Xem bài viết</a>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=post-update&id=<?= $post['p_id'] ?>" class="btn btn-warning">Chỉnh sửa bài viết</a>
-                                    <a href="<?= BASE_URL_ADMIN ?>?act=post-delete&id=<?= $post['p_id'] ?>" 
-                                        onclick="return confirm('Bạn có chắc chắn muốn gỡ bỏ bài viết này không?')"
-                                        class="btn btn-danger">Gỡ bài viết</a>
+                                    <div style="display: flex;">
+                                        <p><?= $product['wa_name'] ?></p>
+                                    </div>
+                                </td>
+
+                                <td><?= $product['p_description'] ?></td>
+                                <td>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=product-detail&id=<?= $product['p_id'] ?>" class="btn btn-info">Xem thông tin</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=product-update&id=<?= $product['p_id'] ?>" class="btn btn-warning">Cập nhật sản phẩm</a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=product-delete&id=<?= $product['p_id'] ?>" 
+                                        onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')"
+                                        class="btn btn-danger">Xóa sản phẩm</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

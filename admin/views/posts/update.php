@@ -6,7 +6,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                Create
+                Cập nhật
             </h6>
         </div>
         <div class="card-body">
@@ -57,7 +57,7 @@
                             </select>
                         </div>
                         <div class="mb-3 mt-3">
-                            <label for="author_id" class="form-label">Category:</label>
+                            <label for="author_id" class="form-label">Tác giả:</label>
                             <select class="form-control" id="author_id" name="author_id">
                                 <?php foreach ($authors as $author) : ?>
                                     <option 

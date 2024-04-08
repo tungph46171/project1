@@ -2,7 +2,7 @@
 
 function categoryListAll()
 {
-    $title = 'Danh sách category';
+    $title = 'Danh sách danh mục';
     $view = 'categories/index';
     $script = 'datatable';
     $script2 = 'categories/script';
@@ -21,7 +21,7 @@ function categoryShowOne($id)
         e404();
     }
 
-    $title = 'Chi tiết category: ' . $category['name'];
+    $title = 'Chi tiết danh mục: ' . $category['name'];
     $view = 'categories/show';
 
     require_once PATH_VIEW_ADMIN . 'layouts/master.php';
@@ -29,7 +29,7 @@ function categoryShowOne($id)
 
 function categoryCreate()
 {
-    $title = 'Thêm mới category';
+    $title = 'Thêm mới danh mục';
     $view = 'categories/create';
 
     if (!empty($_POST)) {
@@ -83,7 +83,7 @@ function categoryUpdate($id)
         e404();
     }
 
-    $title = 'Cập nhật category: ' . $category['name'];
+    $title = 'Cập nhật danh mục: ' . $category['name'];
     $view = 'categories/update';
 
     if (!empty($_POST)) {

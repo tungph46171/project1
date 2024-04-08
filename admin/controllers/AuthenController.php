@@ -12,7 +12,7 @@ function authenLogin() {
     $user = getUserAdminByEmailAndPassword($_POST['email'], $_POST['password']);
 
     if (empty($user)) {
-        $_SESSION['error'] = 'Email hoặc password chưa đúng!';
+        $_SESSION['error'] = 'Email hoặc mật khẩu chưa đúng!';
 
         header('Location: ' . BASE_URL_ADMIN . '?act=login');
         exit();

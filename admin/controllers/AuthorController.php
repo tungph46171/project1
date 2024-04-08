@@ -2,7 +2,7 @@
 
 function authorListAll()
 {
-    $title = 'Danh sách author';
+    $title = 'Danh sách tác giả';
     $view = 'authors/index';
     $script = 'datatable';
     $script2 = 'authors/script';
@@ -21,7 +21,7 @@ function authorShowOne($id)
         e404();
     }
 
-    $title = 'Chi tiết author: ' . $author['name'];
+    $title = 'Chi tiết tác giả: ' . $author['name'];
     $view = 'authors/show';
 
     require_once PATH_VIEW_ADMIN . 'layouts/master.php';
@@ -29,7 +29,7 @@ function authorShowOne($id)
 
 function authorCreate()
 {
-    $title = 'Thêm mới author';
+    $title = 'Thêm mới tác giả';
     $view = 'authors/create';
 
     if (!empty($_POST)) {
@@ -100,7 +100,7 @@ function authorUpdate($id)
         e404();
     }
 
-    $title = 'Cập nhật author: ' . $author['name'];
+    $title = 'Cập nhật tác giả: ' . $author['name'];
     $view = 'authors/update';
 
     if (!empty($_POST)) {

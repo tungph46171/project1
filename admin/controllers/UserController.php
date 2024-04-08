@@ -2,7 +2,7 @@
 
 function userListAll()
 {
-    $title = 'Danh sách User';
+    $title = 'Danh sách người dùng';
     $view = 'users/index';
     $script = 'datatable';
     $script2 = 'users/script';
@@ -21,7 +21,7 @@ function userShowOne($id)
         e404();
     }
 
-    $title = 'Chi tiết User: ' . $user['name'];
+    $title = 'Chi tiết Người dùng: ' . $user['name'];
     $view = 'users/show';
 
     require_once PATH_VIEW_ADMIN . 'layouts/master.php';
@@ -29,7 +29,7 @@ function userShowOne($id)
 
 function userCreate()
 {
-    $title = 'Thêm mới User';
+    $title = 'Thêm mới Người dùng';
     $view = 'users/create';
 
     if (!empty($_POST)) {
@@ -111,7 +111,7 @@ function userUpdate($id)
         e404();
     }
 
-    $title = 'Cập nhật User: ' . $user['name'];
+    $title = 'Cập nhật thông tin người dùng: ' . $user['name'];
     $view = 'users/update';
 
     if (!empty($_POST)) {

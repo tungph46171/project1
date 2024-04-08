@@ -67,6 +67,14 @@ match($act) {
     'product-update' => productUpdate($_GET['id']),
     'product-delete' => productDelete($_GET['id']),
 
+
+    // CRUD Order      (ĐANG HIỆU CHỈNH)
+    'orders' => orderListAll(),
+    'order-detail' => orderShowOne($_GET['id']),
+    'order-create' => orderCreate(),
+    'order-update' => orderUpdate($_GET['id']),
+    'order-delete' => orderDelete($_GET['id']),
+
     // Setting
     'setting-form' => settingShowForm(),
     'setting-save' => settingSave(),

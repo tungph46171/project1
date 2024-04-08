@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 // Require file trong commons
 require_once './commons/env.php';
 require_once './commons/helper.php';
@@ -18,6 +20,38 @@ $act = $_GET['act'] ?? '/';
 
 match($act) {
     '/' => homeIndex(),
+    
+    // giỏ hàng, đơn hàng
+    'cart-add'  => cartAdd($_GET['productID'], $_GET['quantity']),
+    'cart-list' => cartList(),
+    'cart-inc'  => cartInc($_GET['productID']),
+    'cart-dec'  => cartDec($_GET['productID']),
+    'cart-del'  => cartDel($_GET['productID']),
+
+    'order-checkout'  => orderCheckout(),
+    'order-purchase'  => orderPurchase(),
+    'order-success'  => orderSuccess(),
+
+    // Authen
+    'login' => authenShowFormLogin(),
+    'logout' => authenLogout(),
 };
+
+
+// Biến này cần khai báo được link cần đăng nhập mới vào được
+$arrRouteNeedAuth = [
+    'cart-add',
+    'cart-list',
+    'cart-inc',
+    'cart-dec',
+    'cart-del',
+    'order-checkout',
+    'order-purchase',
+    'order-success',
+];
+
+// Kiểm tra xem user đã đăng nhập chưa
+middleware_auth_check($act, $arrRouteNeedAuth);
+
 
 require_once './commons/disconnect-db.php';
