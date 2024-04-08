@@ -17,7 +17,7 @@
     <div class="container">
         <form action="<?= BASE_URL . '?act=order-purchase' ?>" method="POST">
             <div class="row">
-                <h1>Đặt hàng</h1>
+                <h1>Đặt hàng liền tay - Vận may ập tới</h1>
 
                 <div class="col-md-6">
                     <div class="mt-2 mb-2">
@@ -80,7 +80,7 @@
                     <h3>
                         Tổng tiền: 
 
-                        <?= caculator_total_order() ?>
+                        <?= caculator_total_order() ?> VND
                     </h3>
                     <a href="<?= BASE_URL ?>" 
                         onclick="return !confirm('Đừng đi please:))')"

@@ -40,6 +40,11 @@ function orderPurchase()
         }
 
         header('Location: ' . BASE_URL . '?act=order-success');
+
+        
+        // ĐANG TEST
+        $_SESSION['success'] = 'Thao tác thành công!';
+
         exit();
     }
 

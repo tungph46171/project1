@@ -2,7 +2,7 @@
 
 function productListAll()
 {
-    $title      = 'Danh sách product';
+    $title      = 'Danh sách sản phẩm';
     $view       = 'products/index';
     $script     = 'datatable';
     $script2    = 'products/script';
@@ -21,7 +21,7 @@ function productShowOne($id)
         e404();
     }
 
-    $title  = 'Chi tiết product: ' . $product['p_name'];
+    $title  = 'Chi tiết sản phẩm: ' . $product['p_name'];
     $view   = 'products/show';
 
     $tags = getTagsForProduct($id);
@@ -31,7 +31,7 @@ function productShowOne($id)
 
 function productCreate()
 {
-    $title      = 'Thêm mới product';
+    $title      = 'Thêm mới sản phẩm';
     $view       = 'products/create';
     $script     = 'datatable';
     $script2    = 'products/script';
@@ -150,7 +150,7 @@ function productUpdate($id)
         e404();
     }
 
-    $title      = 'Cập nhật product: ' . $product['p_name'];
+    $title      = 'Cập nhật sản phẩm: ' . $product['p_name'];
     $view       = 'products/update';
     $script     = 'datatable';
     $script2    = 'products/script';

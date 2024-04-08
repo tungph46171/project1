@@ -2,7 +2,7 @@
 
 function tagListAll()
 {
-    $title = 'Danh sách tag';
+    $title = 'Danh sách từ khóa';
     $view = 'tags/index';
     $script = 'datatable';
     $script2 = 'tags/script';
@@ -29,7 +29,7 @@ function tagShowOne($id)
 
 function tagCreate()
 {
-    $title = 'Thêm mới tag';
+    $title = 'Thêm mới từ khóa';
     $view = 'tags/create';
 
     if (!empty($_POST)) {
@@ -83,7 +83,7 @@ function tagUpdate($id)
         e404();
     }
 
-    $title = 'Cập nhật tag: ' . $tag['name'];
+    $title = 'Cập nhật từ khóa: ' . $tag['name'];
     $view = 'tags/update';
 
     if (!empty($_POST)) {

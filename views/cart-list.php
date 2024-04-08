@@ -22,7 +22,7 @@
                 <tr>
                     <th>Hình ảnh</th>
                     <th>Tên sản phẩm</th>
-                    <th>Giá</th>
+                    <th>Đơn giá</th>
                     <th>Số lượng</th>
                     <th>Tổng tiền</th>
                     <th>Xóa</th>
@@ -63,7 +63,8 @@
 
             </table>
             
-            <a href="<?= BASE_URL . '?act=order-checkout' ?>" class="btn btn-info mt-5">Checkout</a>
+            <a href="<?= BASE_URL . '?act=order-checkout' ?>" class="btn btn-info mt-5">QUẤT NGAY</a>
+            <a href="index.php" class="btn btn-danger mt-5">Huỷ</a>
         </div>
     </div>
 </body>

@@ -11,7 +11,7 @@
         <div class="sidebar-brand-icon">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-copw-rOwjbuoWCNrAhEw3aGVzzD1KvMOkQ&usqp=CAU" class="logo-img">
         </div>
-        <div class="sidebar-brand-text mx-3">Nhóm 7 PH46171 <sup>🤍</sup></div>
+        <div class="sidebar-brand-text mx-3">Nhóm 7 <sup>🤍</sup></div>
     </a>
 
     <!-- Divider -->
@@ -74,6 +74,12 @@
         </div>
     </li>
 
+    <li class="nav-item">
+        <a href="<?= BASE_URL_ADMIN ?>?act=orders" class="nav-link collapsed">
+            <i class="fab fa-apple"></i>
+            Quản lý Đơn hàng
+        </a>
+    </li>
 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -104,11 +110,11 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
             <i class="fab fa-apple"></i>
-            <span>Quản lý Author</span>
+            <span>Quản lý Tác giả</span>
         </a>
         <div id="collapse5" class="collapse" aria-labelledby="heading4" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=authors">Danh sách author</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=authors">Danh sách tác giả</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=author-create">Thêm mới</a>
             </div>
         </div>

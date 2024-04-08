@@ -2,7 +2,7 @@
 
 function postListAll()
 {
-    $title      = 'Danh sách post';
+    $title      = 'Danh sách bài viết';
     $view       = 'posts/index';
     $script     = 'datatable';
     $script2    = 'posts/script';
@@ -21,7 +21,7 @@ function postShowOne($id)
         e404();
     }
 
-    $title  = 'Chi tiết post: ' . $post['p_title'];
+    $title  = 'Chi tiết bài viết: ' . $post['p_title'];
     $view   = 'posts/show';
 
     $tags = getTagsForPost($id);
@@ -31,7 +31,7 @@ function postShowOne($id)
 
 function postCreate()
 {
-    $title      = 'Thêm mới post';
+    $title      = 'Thêm mới bài viết';
     $view       = 'posts/create';
     $script     = 'datatable';
     $script2    = 'posts/script';
@@ -155,7 +155,7 @@ function postUpdate($id)
         e404();
     }
 
-    $title      = 'Cập nhật post: ' . $post['p_title'];
+    $title      = 'Cập nhật bài viết: ' . $post['p_title'];
     $view       = 'posts/update';
     $script     = 'datatable';
     $script2    = 'posts/script';
