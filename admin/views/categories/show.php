@@ -6,7 +6,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                Chi tiết danh mục
+                Detail
             </h6>
         </div>
         <div class="card-body">
@@ -16,7 +16,7 @@
                     <th>Dữ liệu</th>
                 </tr>
 
-                <?php foreach ($tag as $fieldName => $value) : ?>
+                <?php foreach ($category as $fieldName => $value) : ?>
                     <tr>
                         <td><?= ucfirst($fieldName) ?></td>
                         <td><?= $value ?></td>
@@ -24,7 +24,7 @@
                 <?php endforeach; ?>
             </table>
 
-            <a href="<?= BASE_URL_ADMIN ?>?act=tags" class="btn btn-danger">Quay lại</a>
+            <a href="<?= BASE_URL_ADMIN ?>?act=tags" class="btn btn-danger">Back to list</a>
         </div>
     </div>
 </div>

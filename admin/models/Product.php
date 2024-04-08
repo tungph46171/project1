@@ -19,6 +19,7 @@ if (!function_exists('listAllForProduct')) {
                     p.size_id   as p_size_id,
                     p.glass_id   as p_glass_id,
                     p.warranty_id   as p_warranty_id,
+                    p.category_id   as p_category_id,
                     p.strap_id   as p_strap_id,
                     p.color_id   as p_color_id,
                     p.brand_id   as p_brand_id,
@@ -74,6 +75,7 @@ if (!function_exists('showOneForProduct')) {
 
                 p.size_id   as p_size_id,
                 p.glass_id   as p_glass_id,
+                p.category_id   as p_category_id,
                 p.warranty_id   as p_warranty_id,
                 p.strap_id   as p_strap_id,
                 p.color_id   as p_color_id,
@@ -98,7 +100,6 @@ if (!function_exists('showOneForProduct')) {
                 INNER JOIN colors       as cl   ON cl.id    = p.color_id
                 INNER JOIN brands       as br   ON br.id    = p.brand_id
                 INNER JOIN tags         as tag  ON tag.id   = p.tag_id
-                ORDER BY p_id DESC;
                 WHERE 
                     p.id = :id 
                 LIMIT 1
@@ -122,10 +123,136 @@ if (!function_exists('getTagsForProduct')) {
         try {
             $sql = "
                 SELECT 
-                    t.id    t_id,
-                    t.name  t_name
-                FROM tags as t
-                INNER JOIN product as p   ON t.id     = p.id
+                    tag.id    tag_id,
+                    tag.name  tag_name
+                FROM tags as tag
+                INNER JOIN products as p   ON tag.id     = p.id
+                WHERE p.id = :p_id;
+            ";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(':p_id', $productID);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
+
+if (!function_exists('getGlassesForProduct')) {
+    function getGlassesForProduct($productID) {
+        try {
+            $sql = "
+                SELECT 
+                    gl.id    gl_id,
+                    gl.name  gl_name
+                FROM glasses as gl
+                INNER JOIN products as p   ON gl.id     = p.id
+                WHERE p.id = :p_id;
+            ";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(':p_id', $productID);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
+
+if (!function_exists('getWarrantiesForProduct')) {
+    function getWarrantiesForProduct($productID) {
+        try {
+            $sql = "
+                SELECT 
+                    wa.id    wa_id,
+                    wa.name  wa_name
+                FROM warranties as wa
+                INNER JOIN products as p   ON wa.id     = p.id
+                WHERE p.id = :p_id;
+            ";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(':p_id', $productID);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
+
+if (!function_exists('getStrapsForProduct')) {
+    function getStrapsForProduct($productID) {
+        try {
+            $sql = "
+                SELECT 
+                    st.id    st_id,
+                    st.name  st_name
+                FROM straps as st
+                INNER JOIN products as p   ON st.id     = p.id
+                WHERE p.id = :p_id;
+            ";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(':p_id', $productID);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
+
+if (!function_exists('getColorsForProduct')) {
+    function getColorsForProduct($productID) {
+        try {
+            $sql = "
+                SELECT 
+                    cl.id    cl_id,
+                    cl.name  cl_name
+                FROM colors as cl
+                INNER JOIN products as p   ON cl.id     = p.id
+                WHERE p.id = :p_id;
+            ";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(':p_id', $productID);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
+
+
+if (!function_exists('getBrandsForProduct')) {
+    function getBrandsForProduct($productID) {
+        try {
+            $sql = "
+                SELECT 
+                    br.id    br_id,
+                    br.name  br_name
+                FROM brands as br
+                INNER JOIN products as p   ON br.id     = p.id
                 WHERE p.id = :p_id;
             ";
 
@@ -150,7 +277,7 @@ if (!function_exists('getSizesForProduct')) {
                     si.id    si_id,
                     si.name  si_name
                 FROM sizes as si
-                INNER JOIN product as p   ON si.id     = p.id
+                INNER JOIN products as p   ON si.id     = p.id
                 WHERE p.id = :p_id;
             ";
 
@@ -167,20 +294,19 @@ if (!function_exists('getSizesForProduct')) {
     }
 }
 
-if (!function_exists('deleteTagsByProductID')) {
-    function deleteTagsByProductID($productID) {
-        try {
-            $sql = "DELETE FROM product_tag WHERE product_id = :product_id;";
+// if (!function_exists('deleteTagsByProductID')) {
+//     function deleteTagsByProductID($productID) {
+//         try {
+//             $sql = "DELETE FROM product_tag WHERE product_id = :product_id;";
 
-            $stmt = $GLOBALS['conn']->prepare($sql);
+//             $stmt = $GLOBALS['conn']->prepare($sql);
 
-            $stmt->bindParam(':product_id', $productID);
+//             $stmt->bindParam(':product_id', $productID);
 
-            $stmt->execute();
+//             $stmt->execute();
 
-            return $stmt->fetchAll();
-        } catch (\Exception $e) {
-            debug($e);
-        }
-    }
-}
+//             return $stmt->fetchAll();
+//         } catch (\Exception $e) {
+//             debug($e);
+//         }
+//     }

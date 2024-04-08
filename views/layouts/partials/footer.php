@@ -5,9 +5,10 @@
 
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <h3 class="footer-heading">About ZenBlog</h3>
+                    <h3 class="footer-heading">Nhóm 7 - WD18401</h3>
                     <p><?= $GLOBALS['settings']['overview'] ?? null ?></p>
-                    <p><a href="about.html" class="footer-link-more">Learn More</a></p>
+                    <p>Đinh Văn Tùng</p>
+                    <p>Ngô Xuân Chính</p>
                 </div>
                 <div class="col-6 col-lg-2">
                     <h3 class="footer-heading">Navigation</h3>
