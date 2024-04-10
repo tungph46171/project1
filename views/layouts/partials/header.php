@@ -1,16 +1,16 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="" class="logo d-flex align-items-center">
             <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="<?= BASE_URL ?>assets/client/assets/img/logo.png" alt=""> -->
-            <h1><?= $GLOBALS['settings']['logo'] ?? null ?></h1>
+            <img src="<?= BASE_URL ?>assets/client/assets/img/logo.png" alt="">
+            <h1>Web nhóm 7<?= $GLOBALS['settings']['logo'] ?? null ?></h1>
         </a>
 
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a href=" ">Trang chủ</a></li>
-                <li><a href="views/home-product.php">Sản phẩm</a></li>
+                <li><a href="assets/client/sanpham.php">Sản phẩm</a></li>
                 <li class="dropdown"><a href="category.html"><span>Categories</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
                         <li><a href="search-result.html">Search Result</a></li>
@@ -30,7 +30,7 @@
                     </ul>
                 </li>
 
-                <li><a href="about.html">About</a></li>
+                <li><a href="assets/client/member.html">Thành viên</a></li>
                 <li><a href="admin/index.php">Admin</a></li>
             </ul>
         </nav><!-- .navbar -->

@@ -54,12 +54,13 @@
   </main><!-- End #main -->
 
 
-  <?php require_once PATH_VIEW . $view . '.php'; ?>
 
+  <?php require_once PATH_VIEW . 'layouts/partials/footer.php'; ?>
+
+  <?php //require_once PATH_VIEW . 'cart-list.php'; ?>
 
 
   <!-- ======= Footer ======= -->
-  <?php require_once PATH_VIEW . 'layouts/partials/footer.php'; ?>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

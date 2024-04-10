@@ -17,4 +17,5 @@ function homeIndex() {
     $products = listAll('products');
 
     require_once PATH_VIEW . 'layouts/master.php';
+
 }
