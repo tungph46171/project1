@@ -53,7 +53,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.php">Trang chủ</a></li>
-          <li><a href=" ">Sản phẩm</a></li>
+          <!-- <li><a href=" ">Sản phẩm</a></li>
           <li class="dropdown"><a href="category.html"><span>Danh mục</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="search-result.html">Search Result</a></li>
@@ -71,10 +71,10 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
+          </li> -->
 
-          <li><a href="">Thành viên</a></li>
-          <li><a href="admin/index.php">Admin</a></li>
+          <li><a href="assets/client/member.html">Thành viên</a></li>
+          <li><a href="admin/index.php" onclick="return confirm('Trang này chỉ dành riêng cho admin, bạn đã có tài khoản chứ?')">Admin</a></li>
         </ul>
       </nav><!-- .navbar -->
 

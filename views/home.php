@@ -57,6 +57,7 @@
 
 <!-- Hiển thị 1 số sản phẩm -->
 
+                <h1 class="pnm">-- Sản phẩm mới nhất --</h1>
 <section id="products" class="products">
     <div class="container" data-aos="fade-up">
         <div class="col-lg-4">
@@ -94,6 +95,7 @@
 
 
 <!-- Hiển thị 1 số bài viết -->
+<h1 class="pnm">-- Bài viết nổi bật --</h1>
 
 <section id="posts" class="posts">
     <div class="container" data-aos="fade-up">
@@ -163,7 +165,7 @@
         width: 300px;
         height: 300px;
     }
-    .each-pro{
+    .each-pro, .pnm{
         text-align: center;
     }
     .box-pro{
