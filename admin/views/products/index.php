@@ -80,8 +80,8 @@
                                     <img src="<?= BASE_URL . $product['p_img'] ?>" alt="" width="100px">
                                 </td>
 
-                                <td><?= $product['p_price'] ?> VND</td>
-                                <td><?= $product['p_price_sale'] ?> VND</td>
+                                <td><?= number_format($product['p_price']) ?> VND</td>
+                                <td><?= number_format($product['p_price_sale']) ?> VND</td>
 
                                 <td>
                                     <div style="display: flex;">

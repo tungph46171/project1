@@ -98,6 +98,7 @@ if (!function_exists('settings')) {
 }
 
 
+// ĐANG XEM LẠI
 
 if (!function_exists('middleware_auth_check')) {
     function middleware_auth_check($act, $arrRouteNeedAuth) {

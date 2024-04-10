@@ -71,7 +71,7 @@ match($act) {
     // CRUD Order      (ĐANG HIỆU CHỈNH)
     'orders' => orderListAll(),
     'order-detail' => orderShowOne($_GET['id']),
-    'order-create' => orderCreate(),
+    // 'order-create' => orderCreate(),
     'order-update' => orderUpdate($_GET['id']),
     'order-delete' => orderDelete($_GET['id']),
 

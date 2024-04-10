@@ -61,14 +61,14 @@
     <div class="container" data-aos="fade-up">
         <div class="col-lg-4">
             <table>
-                <tr>
+                <!-- <tr>
                     <th>
                     <a href="#"><img src="<?= BASE_URL . $productTopView['p_img'] ?>" alt="" class="img-pro"></a>
                     <div class="product-meta"><span class="date"><?= $productTopView['c_name'] ?></span> <span class="mx-1">&bullet;</span></div>
                     <h3><a href="#"><?= $productTopView['p_name'] . ' - ' . $productTopView['p_id'] ?></a></h3>
                     <p class="mb-4 d-block"><?= $productTopView['p_price_sale'] ?></p>
                     </th>
-                </tr>
+                </tr> -->
                 <tr>
                     <th>
                     <?php foreach ($products as $product) : ?>
@@ -77,7 +77,7 @@
                             <img class="img-pro" src="<?= BASE_URL . $product['img'] ?>">
                             <div class="prod">
                                 <h4 class="card-title"><?= $product['name'] ?></h4>
-                                <p class="card-text"><?= $product['price_sale'] ?></p>
+                                <p class="card-text"><?= number_format($product['price_sale'] ?: $product['price']) ?></p>
                                 <a href="<?= BASE_URL . '?act=cart-add&productID=' . $product['id'] . '&quantity=1' ?>" class="btn btn-primary">Đặt hàng</a>
                             </div>
                         </div>
@@ -169,8 +169,14 @@
     .box-pro{
         width: 320px;
         height: 420px;
+        margin-bottom: 20px;
+    }
+    th{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 6.9px;
+    }
+    .card-title{
+        height: 62px;
     }
 </style>

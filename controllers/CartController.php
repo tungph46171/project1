@@ -1,5 +1,7 @@
 <?php
 
+
+
 function cartAdd($productID, $quantity = 0)
 {
     // Kiểm tra xem là có product với cái ID kia không
@@ -11,8 +13,8 @@ function cartAdd($productID, $quantity = 0)
 
     // Kiểm tra xem trong bảng carts thì đã có bản ghi nào của user đang đăng nhập chưa
     // Có rồi thì lấy ra cartID, nếu chưa thì tạo mới
-    $cartID = getCartID($_SESSION['user']['id']);
 
+    $cartID = getCartID($_SESSION['user']['id']);
     $_SESSION['cartID'] = $cartID;
 
     // Add sản phẩm vào session cart: $_SESSION['cart'][$productID] = $product
