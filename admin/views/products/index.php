@@ -3,7 +3,8 @@
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?>
 
-        <a href="<?= BASE_URL_ADMIN ?>?act=product-create" class="btn btn-primary">Thêm mới sản phẩm</a>
+        <!-- ĐANG CHỈNH LỖI -->
+        <!-- <a href="<?= BASE_URL_ADMIN ?>?act=product-create" class="btn btn-primary">Thêm mới sản phẩm</a> -->
     </h1>
 
     <!-- DataTales Example -->
